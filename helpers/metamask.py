@@ -58,8 +58,8 @@ class MetamaskAccount:
             new_driver.switch_to.window(new_driver.window_handles[1])
 
             wait.until(ec.element_to_be_clickable((By.XPATH, self.START_BUTTON))).click()
-            wait.until(ec.element_to_be_clickable((By.XPATH, self.CREATE_NEW_WALLET_BUTTON))).click()
             wait.until(ec.element_to_be_clickable((By.XPATH, self.I_AGREE_BUTTON))).click()
+            wait.until(ec.element_to_be_clickable((By.XPATH, self.CREATE_NEW_WALLET_BUTTON))).click()
             wait.until(ec.element_to_be_clickable((By.XPATH, self.PASSWORD_INPUT))).send_keys(self.password)
             new_driver.find_element(By.XPATH, self.CONFIRM_PASSWORD_INPUT).send_keys(self.password)
             new_driver.find_element(By.XPATH, self.AGREEMENT_CHECKBOX).click()
